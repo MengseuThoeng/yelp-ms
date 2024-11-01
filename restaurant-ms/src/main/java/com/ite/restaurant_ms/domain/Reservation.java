@@ -1,5 +1,6 @@
 package com.ite.restaurant_ms.domain;
 
+import com.ite.restaurant_ms.config.jpa.Auditable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @NoArgsConstructor
-public class Reservation {
+public class Reservation extends Auditable {
     @Id
     private Long id;
 

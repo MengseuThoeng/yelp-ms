@@ -1,5 +1,6 @@
 package com.ite.restaurant_ms.domain;
 
+import com.ite.restaurant_ms.config.jpa.Auditable;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Getter
 @Setter
-public class MenuItem {
+public class MenuItem extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
